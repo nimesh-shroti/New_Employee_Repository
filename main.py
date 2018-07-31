@@ -17,6 +17,6 @@ if __name__ == '__main__':
 
         file_content_list.append(employee)
 
-    print(file_content_list[1].addr_1.address_line_1)
+    print(file_content_list)
 
 insert_into(file_content_list)
