@@ -5,6 +5,7 @@ class EmployeeDao:
 
     def __init__(self):
         self.db = DBConnection()
+        
 
     @staticmethod
     def generate_queries(file_content_list):
