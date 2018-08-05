@@ -8,9 +8,12 @@ class Employee:
         self.roll_num = roll_num
         self.age = age
 
-        address_1 = addr_1.split("|")
-        address_2 = addr_2.split("|")
+        #address_1 = addr_1.split("|")
+        #address_2 = addr_2.split("|")
 
-        self.addr_1 = Address(address_1[0],address_1[1],address_1[2],address_1[3],address_1[4])
-        self.addr_2 = Address(address_2[0],address_2[1],address_2[2],address_2[3],address_2[4])
+        self.addr_1 = addr_1
+        self.addr_2 = addr_2
+
+    def set_emp_id(self, id):
+        self.emp_id = id
 
