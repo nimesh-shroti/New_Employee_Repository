@@ -11,7 +11,8 @@ class Controller:
         employees = CSVMapper.map("names.csv")
         # print(file_content_list)
 
-        self.dao.insert_data(employees)
+        #self.dao.insert_data(employees)
+        self.dao.insert_with_inheritance(employees)
 
 
 #ctrl + alt + l :: format code

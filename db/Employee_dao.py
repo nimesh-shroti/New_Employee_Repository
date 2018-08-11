@@ -1,10 +1,13 @@
 from db.db_connection import DBConnection
+from db.base_dao import BaseDao
 
 
-class EmployeeDao:
+class EmployeeDao(BaseDao):
 
     def __init__(self):
-        self.db = DBConnection()
+        super(EmployeeDao, self).__init__()
+        #self.db = DBConnection()
+        pass
         
 
     @staticmethod
@@ -33,6 +36,16 @@ class EmployeeDao:
         Query = "INSERT INTO address (addr_line_1,addr_line_2,city,pincode,country,emp_id) VALUES ( '"
         Query += addr.address_line_1 + "','" + addr.address_line_2 + "','" + addr.city + "','" + str(addr.zip_code) + "','" + addr.country + "','" + str(addr.emp_id) + "')"
         return Query
+
+    def insert_with_inheritance(self, employees):
+
+        for emp in employees:
+            query = EmployeeDao.generate_query(emp)
+            ######
+            # id = super().insert(query)
+            id = self.insert(query)
+            print("inserted emp is : ", id)
+
 
     def insert_data(self, employees):
 
