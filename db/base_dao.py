@@ -3,11 +3,10 @@ from db.db_connection import DBConnection
 
 class BaseDao:
 
-
     def __init__(self):
         self.db = DBConnection()
 
-    def insert(self,query):
+    def insert(self, query):
         con = None
         cursor = None
         try:
@@ -22,12 +21,11 @@ class BaseDao:
             cursor.close()
             con.close()
 
-
-    def select(self,query):
+    def select(self, query):
         pass
 
-    def update(self,query):
+    def update(self, query):
         pass
 
-    def delete(self,query):
+    def delete(self, query):
         pass

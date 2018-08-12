@@ -8,6 +8,13 @@ class Controller:
         self.dao = EmployeeDao()  ## creating instance of dao layer here...
 
     def start_processing(self):
+
+        ## os.. what is the extension of the file
+
+        ## if ext == "csv"
+        ## if ext == "json"
+        ## if ext == "xls"
+
         employees = CSVMapper.map("names.csv")
         # print(file_content_list)
 
