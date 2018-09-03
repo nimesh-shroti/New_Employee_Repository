@@ -11,7 +11,7 @@ def m1():
     # lock.acquire()
     for i in range(20):
         print(" Thread working is :: ", threading.current_thread().name)
-        time.sleep(1)
+        #time.sleep(1)
         #m2()
         global counter
         counter += 1
@@ -22,14 +22,19 @@ def m2():
     print("This is common method. Should be accessed by single thread at a time.",  threading.current_thread().name)
 
 
-nimesh = threading.Thread(target=m1, args=(), name="Nimesh", )
-chaitanya = threading.Thread(target=m1, args=(), name="chaitanya")
+threads_list = []
+for i in range(10000):
+
+    nimesh = threading.Thread(target=m1, args=(), name="Thread-" + str(i), )
+    threads_list.append(nimesh)
+
+for t in threads_list:
+    t.start()
 
 
-nimesh.start()
-chaitanya.start()
 
-nimesh.join()
-chaitanya.join()
+for t in threads_list:
+    t.join()
+
 
 print("Counter :: ", counter)
