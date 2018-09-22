@@ -27,6 +27,8 @@ def m2():
     # DB GET
     result = json.jsonify({"hi":"This is response from POST API :: " + request.args.get("name")})
     print("Printing result object :: ", result.data, request.args.get("name"))
+
+    request.get_json()
     logger.debug("debug Printing result object...."+ str(result.data))
     return result, 200
 
