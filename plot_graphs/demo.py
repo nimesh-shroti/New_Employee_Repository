@@ -37,29 +37,52 @@ print(y)
 
 
 # OO
-
-figure = plt.figure()
-
-axis = figure.add_axes([0.1,0.1,0.8,0.8])
-axis.plot(x,y)
-axis.set_xlabel("thisdfsd")
-
-axis2 = figure.add_axes([0.2,0.6,0.2,0.2])
-axis2.plot([1,2,3,4],[1,2,3,4])
-
-figure.show()
-
-
-
 #
-# fig, axis = plt.subplots(nrows=2,ncols=3)
+# figure = plt.figure()
 #
-# print(type(axis))
+# axis = figure.add_axes([0.1,0.1,0.8,0.8])
+# axis2 = figure.add_axes([0.1,0.1,0.8,0.8])
+# axis3 = figure.add_axes([0.1,0.1,0.8,0.8])
+# axis4 = figure.add_axes([0.1,0.1,0.8,0.8])
+# axis.plot(x,y)
+
+# l = []
+#
+# l.append(axis)
+# l.append(axis2)
+# l.append(axis3)
+# l.append(axis4)
 #
 #
+# for axs in l:
+#     axs.plot(x,y)
+
+
+
+# axis.set_xlabel("thisdfsd")
+#
+# axis2 = figure.add_axes([0.2,0.6,0.2,0.2])
+# axis2.plot([1,2,3,4],[1,2,3,4])
+#
+# figure.show()
+
+
+
+
+fig, axis = plt.subplots(nrows=5,ncols=5)
+
+print(type(axis))
+
+
 # axis[0,1].plot(x,y)
-# # for a in axis:
-# #     a.plot(x,y)
-#
-#
-# plt.show()
+# for a in np.ndi
+#[[]]
+for a in axis:
+    print("Row: ", type(a))
+
+    for aa in a:
+        print(aa)
+        aa.plot(x,y)
+
+
+plt.show()
