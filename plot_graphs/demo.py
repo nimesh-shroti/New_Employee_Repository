@@ -38,24 +38,24 @@ print(y)
 
 # OO
 #
-# figure = plt.figure()
-#
-# axis = figure.add_axes([0.1,0.1,0.8,0.8])
-# axis2 = figure.add_axes([0.1,0.1,0.8,0.8])
-# axis3 = figure.add_axes([0.1,0.1,0.8,0.8])
-# axis4 = figure.add_axes([0.1,0.1,0.8,0.8])
-# axis.plot(x,y)
+figure = plt.figure()
 
-# l = []
-#
-# l.append(axis)
-# l.append(axis2)
-# l.append(axis3)
-# l.append(axis4)
-#
-#
-# for axs in l:
-#     axs.plot(x,y)
+axis = figure.add_axes([0.1,0.1,0.8,0.8])
+axis2 = figure.add_axes([0.1,0.1,0.8,0.8])
+axis3 = figure.add_axes([0.1,0.1,0.8,0.8])
+axis4 = figure.add_axes([0.1,0.1,0.8,0.8])
+axis.plot(x,y)
+
+l = []
+
+l.append(axis)
+l.append(axis2)
+l.append(axis3)
+l.append(axis4)
+
+
+for axs in l:
+    axs.plot(x,y)
 
 
 
